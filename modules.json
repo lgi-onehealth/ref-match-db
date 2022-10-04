@@ -1,0 +1,15 @@
+{
+    "name": "",
+    "homePage": "",
+    "repos": {
+        "nf-core/modules": {
+            "git_url": "https://github.com/nf-core/modules.git",
+            "modules": {
+                "ncbigenomedownload": {
+                    "branch": "master",
+                    "git_sha": "ed827666964d791344986e2afffe5a01efc5cb92"
+                }
+            }
+        }
+    }
+}
