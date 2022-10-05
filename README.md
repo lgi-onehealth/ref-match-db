@@ -61,11 +61,31 @@ The pipeline will create a directory called `databases` in the current working d
 Multiple organisms can be specified by separating them with a comma:
 
 ```bash
-nextflow run lgi-onehealth/ref-match-db --organisms "Listeria,Neisseria" -profile docker
+nextflow run lgi-onehealth/ref-match-db --organisms "Listeria monocytogenes,Neisseria" -profile docker
 ```
 
 This will run the pipeline in parallel for each organism, creating individual
 databases for each organism.
+
+To create databases for specific _Salomonella_ serovars, use the `--organisms` parameter with the following format:
+
+```bash
+nextflow run lgi-onehealth/ref-match-db --organisms "Salmonella enterica subsp. enterica serovar Dublin" -profile docker
+```
+
+## Workflow parameters
+
+The following parameters are available for the pipeline:
+
+| Parameter          | Description                          | Default                                              |
+| ------------------ | ------------------------------------ | ---------------------------------------------------- |
+| `--organisms`      | Organism(s) to create databases for. | `Salmonella enterica subsp. enterica serovar Dublin` |
+| `--outdir`         | Output directory for the databases.  | `databases`                                          |
+| `--assembly-level` | Assembly level to download.          | `complete`                                           |
+| `--group`          | Group to download                    | `bacteria`                                           |
+
+The `--assembly-level` and `--group` parameters are passed directly to `ncbi-genome-download` and so can be anything that is acceptable for that tool.
+Possible values can be found in the `ncbi-genome-download` [documentation](https://github.com/kblin/ncbi-genome-download).
 
 ## References
 
