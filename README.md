@@ -89,7 +89,7 @@ Possible values can be found in the `ncbi-genome-download` [documentation](https
 
 ## References
 
-Blin, K (2016) ncbi-genome-download (version 0.3.1) [Source code]. [https://github.com/kblin/ncbi-genome-download](https://github.com/kblin/ncbi-genome-download/)
+Blin, K. (2016). ncbi-genome-download (version 0.3.1) [Source code]. [https://github.com/kblin/ncbi-genome-download](https://github.com/kblin/ncbi-genome-download/)
 
 Ewels, P. A., Peltzer, A., Fillinger, S., Patel, H., Alneberg, J., Wilm, A., Garcia, M. U., Di Tommaso, P., & Nahnsen, S. (2020). The nf-core framework for community-curated bioinformatics pipelines. Nature Biotechnology, 38(3), 276–278. [https://doi.org/10.1038/s41587-020-0439-x](https://doi.org/10.1038/s41587-020-0439-x)
 
