@@ -65,7 +65,18 @@ nextflow run lgi-onehealth/ref-match-db --organisms "Listeria monocytogenes,Neis
 ```
 
 This will run the pipeline in parallel for each organism, creating individual
-databases for each organism.
+databases for each organism. The output will be in the `databases` directory with the following structure:
+
+```bash
+databases
+├── listeria_monocytogenes
+│   ├── db.msh
+│   └── db.tsv
+└── neisseria
+    ├── db.msh
+    └── db.tsv
+```
+
 
 To create databases for specific _Salomonella_ serovars, use the `--organisms` parameter with the following format:
 
