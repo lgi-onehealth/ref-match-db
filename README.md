@@ -47,13 +47,25 @@ nextflow run lgi-onehealth/ref-match-db -profile test,docker
 
 The primary parameter that most users will be concerned with is the `--organisms`
 parameter. This parameter is used to specify the organism of interest. The 
-`--organisms` parameter is passed directly to `ncbi-genome-download` and so can be anything that is acceptable for that tool.
+`--organisms` parameter is passed directly to `ncbi-genome-download` `--genera` 
+parameter and so can be anything that is acceptable for that tool.
 
 For example, to create a database of _Neisseria_ genomes, run:
 
 ```bash
 nextflow run lgi-onehealth/ref-match-db --organisms "Neisseria" -profile docker
 ```
+
+The pipeline will create a directory called `databases` in the current working directory, and in it will create a directory for each organism specified. In each organism directory, there will be `referenceseeker` database.
+
+Multiple organisms can be specified by separating them with a comma:
+
+```bash
+nextflow run lgi-onehealth/ref-match-db --organisms "Listeria,Neisseria" -profile docker
+```
+
+This will run the pipeline in parallel for each organism, creating individual
+databases for each organism.
 
 ## References
 
